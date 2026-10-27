@@ -1,0 +1,20 @@
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: cool
+      POSTGRES_USER: cool
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-cool_local_only}
+      TZ: Asia/Jakarta
+      PGTZ: Asia/Jakarta
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - cool_postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cool -d cool"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+volumes:
+  cool_postgres:
