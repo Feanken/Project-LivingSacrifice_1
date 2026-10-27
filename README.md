@@ -1,5 +1,7 @@
 # COOL Living Sacrifice — Ruang Firman
 
+Repo GitHub: `Project-LivingSacrifice_1`.
+
 Aplikasi komunitas untuk mencatat, membaca, mencari, dan membagikan ringkasan firman. Dibangun dari `requirements.md`, `design.md`, dan `tasks.md` dengan Next.js App Router, React, TypeScript, Tailwind CSS, TanStack Query, Zod, dan PostgreSQL.
 
 ## Coba di komputer ini
